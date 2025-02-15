@@ -1,23 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
+
+<head>
+  <title>Witflix</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <!--
       Need a visual blank slate?
       Remove all code in `styles.css`!
     -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script type="module" src="script.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/WitFlix.svg">
+    </div>
+    <nav class="topics">
+      <a href="#">Popüler</a>
+      <a href="#">Dram</a>
+      <a href="#">Komedi</a>
+      <a href="#">Korku</a>
     </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
+    <div class="header-right">
+      <div class="search">
+        <input type="text" placeholder="Search..." />
+        <i class="search-icon fa-solid fa-search"></i>
+      </div>
+      <div class="profile">
+        <i class="fa-regular fa-bell"></i>
+        <i class="fa-solid fa-user"></i>
+      </div>
+    </div>
+  </header>
+  <hr>
+  <main>
+    <div class="hero-content">
+      <h1 class="movie-title">TITANIC</h1>
+      <div class="movie-info">
+        <div class="user-ratings">
+          <span class="user-rating">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+          <span class="imdb-rating">
+            <span class="rating-number">8.4</span>
+            <span class="rating-source">IMDB</span>
+          </span>
+        </div>
+        <span class="maturity-rating">16+</span>
+        <span class="duration">2 h 20 min</span>
+      </div>
+      <p class="description">
+        A young aristocratic woman, Rose, falls in love with a poor artist, Jack, aboard the
+        ill-fated R.M.S. Titanic. As the ship sails toward its tragic fate, the two struggle to overcome societal
+        differences, class divisions, and the impending disaster, leading to a love story that transcends time and loss.
+      </p>
+      <ul class="movie-details">
+        <li><span class="label">Starring:</span> Leonardo DiCaprio, Kate Winslet</li>
+        <li><span class="label">Genre:</span> Drama, Romance</li>
+        <li><span class="label">Tags:</span> Romance, Tragedy, Historical</li>
+      </ul>
+      <button class="btn">
+        <i class="fas fa-play"></i>
+        <span class="play-text">Play Now</span>
+      </button>
+    </div>
+  </main>
+  <section title="Popular and Recommended">
+    <div class="popular-movies">
+      <div class="section-header">
+        <h2>Popular Movies</h2>
+        <a href="#" class="view-all">View All</a>
+      </div>
+      <div class="movie-card-container">
+        <div class="movie-card">
+          <img src="images/skeleton-crew-img.mp4" alt="">
+          <video src="images/skeleton-crew-video.mp4" class="popular-movie-cards" muted></video>
+          <div class="movie-card-content">
+            <h3>Star Wars: Skeleton Crew</h3><span class="card-details">
+              <p class="details-age">7+</p>
+              <p>1 Season</p>
+            </span>
+          </div>
+          <a href="#" class="play-button">Play Now</a>
+        </div>
+        <!-- Popular Movie Card 2 -->
+        <div class="movie-card">
+          <img src="images/ted2-img.jpg" alt="Ted2">
+          <video class="popular-movie-cards" src="images/ted2-video.mp4" muted></video>
+          <div class="movie-card-content">
+            <h3>Ted 2</h3><span class="card-details">
+              <p class="details-age">18+</p>
+              <p>1 h 55 min</p>
+            </span>
+          </div>
+          <a href="#" class="play-button">Play Now</a>
+        </div>
+        <!-- Popular Movie Card 3 -->
+        <div class="movie-card">
+          <img src="images/hamilton-img.jpg" alt="Hamilton">
+          <video class="popular-movie-cards" src="images/hamilton-video.mp4" muted></video>
+          <div class="movie-card-content">
+            <h3>Hamilton</h3><span class="card-details">
+              <p class="details-age">16+</p>
+              <p>2 h 20 min</p>
+            </span>
+          </div>
+          <a href="#" class="play-button">Play Now</a>
+        </div>
+        <!-- Popular Movie Card 4 -->
+        <div class="movie-card">
+          <img src="images/andor-img.jpg" alt="Andor">
+          <video class="popular-movie-cards" src="images/andor-video.mp4" muted></video>
+          <div class="movie-card-content">
+            <h3>Andor</h3><span class="card-details">
+              <p class="details-age">16+</p>
+              <p>2 Season</p>
+            </span>
+          </div>
+          <a href="#" class="play-button">Play Now</a>
+        </div>
+        <!-- Popular Movie Card 5 -->
+        <div class="movie-card">
+          <img src="images/venom-img.jpg" alt="Venom: The Last Dance">
+          <video class="popular-movie-cards" src="images/venom4-video.mp4" muted></video>
+          <div class="movie-card-content">
+            <h3>Venom: The Last Dance</h3><span class="card-details"></span>
+            <p class="details-age">16+</p>
+            <p>1 h 49 min</p></span>
+          </div>
+          <a href="#" class="play-button">Play Now</a>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="recommended-movies">
+      <div class="section-header">
+        <h2>Recommended for you</h2>
+        <a href="#" class="view-all">View All</a>
+      </div>
+      <div class="movie-card-container">
+        <!-- Recommended Movie Card 1 -->
+        <div class="movie-card">
+          <img src="images/the-acolyte-img.mp4" alt="The Acolyte">
+          <video class="recommended-movie-cards" src="images/the-acolyte-video .mp4" muted></video>
+          <div class="movie-card-content">
+            <h3>The Acolyte</h3><span class="card-details">
+              <p class="details-age">16+</p>
+              <p>2 h 21 min</p>
+            </span>
+          </div>
+          <a href="#" class="play-button">Play Now</a>
+        </div>
+        <!-- Recommended Movie Card 2 -->
+        <div class="movie-card">
+          <img src="images/Captain America_ Brave New World -img.jpg" alt="Captain America: Brave New World">
+          <video class="recommended-movie-cards" src="images/Captain America_ Brave New World - video .mp4"
+            muted></video>
+          <div class="movie-card-content">
+            <h3>Captain America: Brave New World</h3><span class="card-details">
+              <p class="details-age">16+</p>
+              <p>1 h 48 min</p>
+            </span>
+          </div>
+          <a href="#" class="play-button">Play Now</a>
+        </div>
+        <!-- Recommended Movie Card 3 -->
+        <div class="movie-card">
+          <img src="images/Sonic the Hedgehog 3 -img.jpg" alt="Sonic the Hedgehog 3">
+          <video class="recommended-movie-cards" src="images/Sonic the Hedgehog 3 -video .mp4" muted></video>
+          <div class="movie-card-content">
+            <h3>Sonic the Hedgehog 3</h3><span class="card-details">
+              <p class="details-age">16+</p>
+              <p>1 h 49 min</p>
+            </span>
+          </div>
+          <a href="#" class="play-button">Play Now</a>
+        </div>
+        <!-- Recommended Movie Card 4 -->
+        <div class="movie-card">
+          <img src="images/The Bad Guys 2 -img.jpg" alt="The Bad Guys 2">
+          <video class="recommended-movie-cards" src="images/The Bad Guys 2 -video .mp4" muted></video>
+          <div class="movie-card-content">
+            <h3>The Bad Guys 2</h3><span class="card-details">
+              <p class="details-age">16+</p>
+              <p>1 h 52 min</p>
+            </span>
+          </div>
+          <a href="#" class="play-button">Play Now</a>
+        </div>
+        <!-- Recommended Movie Card 5 -->
+        <div class="movie-card">
+          <img src="images/Wolf Man -img.jpg" alt="Wolf Man">
+          <video class="recommended-movie-cards" src="images/Wolf Man -video .mp4" muted></video>
+          <div class="movie-card-content">
+            <h3>Wolf Man</h3><span class="card-details">
+              <p class="details-age">16+</p>
+              <p>2 h 21 min</p>
+            </span>
+          </div>
+          <a href="#" class="play-button">Play Now</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-helps">
+      <div class="helps-nav">
+        <nav>
+          <a href="https://help.netflix.com/legal/termsofuse?locale=en-IE">Terms of Use</a>
+          <a href="https://help.netflix.com/en/legal/privacy">Privacy-Policy</a>
+          <a href="https://help.netflix.com/">FAQ</a>
+          <a href="#">Watch List</a>
+        </nav>
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum architecto nihil illo ut velit aliquid.
+        Expedita quaerat natus voluptate aut accusantium? Laudantium placeat modi repudiandae corrupti delectus
+        accusamus sit officia.</p>
+    </div>
+    <div class="footer-socials">
+      <p>Follow Us</p>
+      <div class="social-icons">
+        <img src="images/facebook-icon-1.png" alt="WitFlix Facebook Page" id="facebook-icon">
+        <img src="images/youtube-icon.png" alt="WitFlix Youtube Page">
+        <img src="images/twitter-icon.png" alt="WitFlix X Page">
+      </div>
+    </div>
+    <div class="apps">
+      <p>Apps</p>
+      <div class="apps-icons">
+        <img src="images/applestore.png" alt="WitFlix on AppStore">
+        <img src="images/googleplay.png" alt="WitFlix on GooglePlay">
+      </div>
+    </div>
+  </footer>
+
+</body>
+
 </html>
