@@ -238,6 +238,28 @@
     </div>
   </footer>
 
+  <script>
+
+
+
+    //Movie Cardlar için video start-stop kısmı
+
+    const movieCards = document.querySelectorAll('.movie-card');
+    movieCards.forEach(card => {
+      const video = card.querySelector('video');
+      const playButton = card.querySelector('.play-button');
+
+      card.addEventListener('mouseenter', () => {
+        video.play();
+      });
+
+      card.addEventListener('mouseleave', () => {
+        video.pause();
+        video.currentTime = 0;
+      });
+    });
+
+  </script>
 </body>
 
 </html>

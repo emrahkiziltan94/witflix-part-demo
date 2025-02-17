@@ -1,3 +1,376 @@
-* {
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Aria, sans-serif;
   box-sizing: border-box;
+
+}
+
+hr {
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  background-color: #ffffff;
+  color: #000000;
+
+}
+
+.logo img {
+  height: 20px;
+}
+
+header nav {
+  width: 30%;
+  max-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
+  gap: 5px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: black;
+}
+
+.search {
+  position: relative;
+  display: inline-block;
+}
+
+.search input {
+  width: 100px;
+  padding: 10px 35px 10px 10px;
+  border-radius: 5px;
+  outline: none;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-right: 10px;
+}
+
+main {
+  background-image: url('/images/titanic.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px;
+}
+
+.hero-content {
+  max-width: 70%;
+  margin-left: 0;
+  text-align: left;
+  color: white;
+}
+
+.movie-title {
+  font-size: 2rem;
+  text-shadow: 2px 2px 6px black;
+}
+
+.movie-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 10px;
+  font-size: 1rem;
+  text-shadow: 1px 1px 4px black;
+}
+
+.user-ratings {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.user-rating {
+  color: #ff0000;
+}
+
+.maturity-rating {
+  padding: 3px 5px;
+  border: 1px solid #d9d9d9;
+  border-radius: 5px;
+}
+
+.duration {
+  font-weight: normal;
+}
+
+.description {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 4px black;
+}
+
+.movie-details {
+  color: white;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 4px black;
+}
+
+.movie-details .label {
+  font-weight: normal;
+  color: #ff0000;
+}
+
+.btn {
+  background-color: #ff0000;
+  color: #d9d9d9;
+  padding: 5px 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+}
+
+section {
+  padding: 10px;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.movie-card {
+  position: relative;
+  width: 200px;
+  height: 300px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #000;
+  transition: tranform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.movie-card-container {
+  display: flex;
+  gap: 1vw;
+  padding-bottom: 5px;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+  position: relative;
+}
+
+.movie-card-content {
+  width: 40%;
+  display: inline;
+  text-align: left;
+  color: whitesmoke;
+  z-index: 3;
+  padding: 1vh;
+  position: absolute;
+  bottom: 5.5vh;
+  left: 0.4vw;
+}
+
+.play-button {
+  position: absolute;
+  bottom: 1vh;
+  left: 0.4vw;
+  z-index: 3;
+  background-color: rgb(212, 0, 0);
+  color: white;
+  pad: 0.8px 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.movie-card-content p {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+}
+
+
+
+.card-details {
+  display: flex;
+  padding-top: 4px;
+  gap: 5px;
+}
+
+.details-age {
+  border: 1px solid white;
+  font-size: 11px;
+  text-align: center;
+  width: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1px 1px;
+}
+
+.movie-card-container::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.movie-card-container::-webkit-scrollbar-thumb {
+  background-color: #35353500;
+  border-radius: 10px;
+
+}
+
+.movie-card-container::-webkit-scrollbar-track {
+  background-color: white;
+
+}
+
+.movie-card-container::-webkit-scrollbar-track:hover {
+  background-color: white;
+
+}
+
+.movie-card-container::-webkit-scrollbar-thumb:hover {
+  background-color: #3535353a;
+}
+
+.movie-card img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 1;
+}
+
+.movie-card video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  z-index: 2;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.movie-card:hover img {
+  opacity: 0;
+}
+
+.movie-card:hover video {
+  opacity: 1;
+}
+
+
+
+.play-button:hover {
+  background-color: rgb(162, 0, 0);
+  opacity: 0.9;
+}
+
+
+
+/* Footer Yardım ve Bilgi Alanı */
+.footer-helps {
+  width: 40%;
+}
+
+.footer-helps nav {
+  display: flex;
+  flex-direction: row;
+  gap: 8vw;
+
+}
+
+.footer-helps a {
+  text-decoration: none;
+  color: whitesmoke;
+  transition: color 0.2s;
+}
+
+.footer-helps a:hover {
+  color: #007bff;
+}
+
+.footer-helps p {
+  margin-top: 2vh;
+}
+
+/* Sosyal Medya ve İkonlar */
+.footer-socials {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-socials p {
+  margin-bottom: 1.2vh;
+  font-weight: bold;
+  margin-left: 1.6vw;
+}
+
+.footer-socials img {
+  width: 30px;
+  height: 26px;
+  margin: 4px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.view-all {
+  display: card-container;
+  justify-items: end;
+  margin: auto;
+  margin-right: 1vh;
+}
+
+/* Apps alanı */
+.apps {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.apps p {
+  margin-bottom: 1vh;
+  font-weight: bold;
+  margin-left: 5.5vw;
+}
+
+.apps img {
+  width: 120px;
+  height: auto;
+  margin: 5px 0;
+}
+
+.section-header {
+  display: flex;
+}
+
+
+.section-header a {
+  margin-top: 35px
 }
